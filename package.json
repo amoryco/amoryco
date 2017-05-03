@@ -1,0 +1,35 @@
+{
+  "name": "amoryco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amoryco/amoryco.git"
+  },
+  "author": "Amory.co",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amoryco/amoryco/issues"
+  },
+  "homepage": "https://github.com/amoryco/amoryco#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "foundation-sites": "^6.3.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "jshint-stylish": "^2.2.1"
+  }
+}

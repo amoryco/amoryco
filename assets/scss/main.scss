@@ -1,0 +1,47 @@
+@import 'settings';
+@import 'foundation';
+@include foundation-everything;
+
+.title {
+    font-family: 'Playfair Display',Georgia, serif;
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 5.9em;
+    color: #252525;
+    line-height: 1.42em;
+    display: block;
+    margin-top: 0.5em;
+    position: relative;
+}
+
+.leads {
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+.leads-para {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3em;
+    color: #252525;
+    @include flex-grid-column(12,90);
+}
+
+
+p {
+    font-size: 26px;
+    font-family: 'Avenir', sans-serif;
+    color: #252525;
+    @include flex-grid-column(12,90);
+}
+
+html {
+    color: #252525;
+}
+
