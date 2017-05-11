@@ -3950,7 +3950,7 @@ body {
 
 main {
   background: white;
-  margin: 1.5em; }
+  margin: 1em; }
   @media print, screen and (min-width: 40em) {
     main {
       margin: 2.5em; } }
@@ -4103,7 +4103,7 @@ Cases                 |
     .am_case-studies_ta {
       height: 450px; } }
 
-.am_case-studies_link_wrapper:hover .am_case-studies-button {
+.am_case-studies_link_wrapper:hover .am_case-studies-button, .am_case-studies_link_wrapper:focus .am_case-studies-button {
   border-bottom: 2px solid #E91E63;
   padding-bottom: 0.4em; }
 
