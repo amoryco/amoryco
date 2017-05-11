@@ -202,7 +202,7 @@ Cases                 |
     text-align: left;
     transition: all 0.3s ease;
 
-    @include breakpoint(large) { 
+    @include breakpoint(xlarge) { 
         font-size: 1.85em;
     }
 }
@@ -255,14 +255,14 @@ Who we is             |
     @include flex-grid-column(12,40);
 
     @include breakpoint(large) {
-        @include flex-grid-column(7,90);
+        @include flex-grid-column(8,90);
     }
 }
 /*=====================
 Work with us          |
 =====================*/
 .am_work-with-us {
-    padding: 4em 0;
+    padding: 4em 0.5em;
     background-color: $brand-color;
     text-align: center;
 
