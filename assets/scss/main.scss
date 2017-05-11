@@ -21,7 +21,7 @@ body {
 
 main {
     background: white;
-    margin: 1.5em;
+    margin: 1em;
 
     @include breakpoint(medium) {
         margin: 2.5em;
@@ -166,7 +166,8 @@ Cases                 |
 }
 
 .am_case-studies_link_wrapper {
-    &:hover {
+    &:hover,
+    &:focus {
         .am_case-studies-button {
             border-bottom: 2px solid $brand-color;
             padding-bottom: 0.4em;
