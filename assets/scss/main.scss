@@ -1,0 +1,276 @@
+@import 'settings'; 
+@import 'foundation';
+@include foundation-everything;
+
+$brand-color: #E91E63;
+$brand-secondary-color: #74E2FD;
+/*=====================
+Global                |
+=====================*/
+body {
+    color: #252525;
+    background: #f9f9f9;
+    font-size: 1rem;
+    @include breakpoint(medium) {
+        font-size: 1.5rem;
+    }
+    @include breakpoint(large) {
+        margin: 1.9rem;
+    }
+}
+
+main {
+    background: white;
+    margin: 1.5em;
+
+    @include breakpoint(medium) {
+        margin: 2.5em;
+    }
+
+    @include breakpoint(large) {
+        margin: 3em;
+    }
+}
+
+footer {
+    margin: 1.5em;
+
+    @include breakpoint(medium) {
+        margin: 2.5em;
+    }
+
+    @include breakpoint(large) {
+        margin: 3em;
+    }
+}
+/*=====================
+Typography            |
+=====================*/
+.title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 3.5em;
+    color: #292929;
+    font-family: 'Avenir', 'Roboto Mono', sans-serif;
+    letter-spacing: -0.023em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+    border-bottom: 3px solid $brand-color;
+    max-width: 6em;
+}
+
+h2 {
+    font-weight: 900;
+    font-family: 'Avenir', sans-serif;
+    font-size: 1.2246em;
+    color:#444;
+}
+
+h3 {
+    font-weight: 600;
+    font-family: 'Avenir', sans-serif;
+    font-size: 1.05em;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 300;
+    font-family: 'Avenir', sans-serif;
+    color: #252525;
+}
+
+button {
+    font-family: 'Roboto Mono';
+    border: 2px solid $brand-color;
+    padding: 0.5em 1em;
+    color: $brand-color;
+    transition: all 0.4s ease;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+/*=====================
+Intro                 |
+=====================*/
+.am_intro_wrapper {
+    background: white;
+}
+
+.am_intro_text {
+    @include flex-grid-column(12, 45);
+    margin: 0 auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+
+    @include breakpoint(large) {
+        padding: 4em 2.5em;
+        @include flex-grid-column(10);
+    }
+
+    @include breakpoint(xlarge) {
+        @include flex-grid-column(8);
+    }
+
+    h3{
+        font-family: 'Roboto Mono', monospace;
+
+    }
+}
+/*=====================
+Cases                 |
+=====================*/
+.am_case-studies {
+    @include breakpoint(medium) {
+        display: flex;
+    }
+}
+
+.am_case-studies_block {
+    flex: 1 1 auto;
+    width: 100%;
+
+    @include breakpoint(medium) {
+        width: 50%;
+    }
+}
+
+.am_case-studies_wco{
+    height: 300px;
+    background-image: url('/assets/images/wco-vineyard.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    @include breakpoint(medium) {
+        height: 450px;
+    }
+}
+
+.am_case-studies_ta {
+    height: 300px;
+    background-image: url('/assets/images/media.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    @include breakpoint(medium) {
+        height: 450px;
+    }
+}
+
+.am_case-studies_link_wrapper {
+    &:hover {
+        .am_case-studies-button {
+            border-bottom: 2px solid $brand-color;
+            padding-bottom: 0.4em;
+        }
+    }
+}
+
+.am_case-studies_filter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(50,50,50,0.64);
+    z-index: 0;
+}
+
+.am_case-studies_content {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2em 1em;
+}
+
+.am_case-studies-title {
+    color: #fff;
+    padding-bottom: 0.3em;
+    margin: 0 auto;
+    font-size: 1.3em;
+    text-align: left;
+    transition: all 0.3s ease;
+
+    @include breakpoint(large) { 
+        font-size: 1.85em;
+    }
+}
+
+.am_case-studies-client {
+    font-size: 0.98em;
+    color: #fff;
+    margin-bottom: 0.65em;
+    padding: 0;
+    transition: all 0.3s ease;
+
+    @include breakpoint(large) { 
+        font-size: 1.05em;
+    }
+}
+
+.am_case-studies-button {
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    transition: all 0.6s ease;
+    border-bottom: 2px solid $brand-color;
+    padding-bottom: 0;
+}
+/*=====================
+Who we is             |
+=====================*/
+.am_who-we-are {
+    padding: 3em 0;
+}
+
+.am_who-we-are_wrapper {
+    @include breakpoint(large) {
+        display: flex;
+    }
+}
+
+.am_who-we-are_title {
+    @include flex-grid-column(12,40);
+
+    @include breakpoint(large) {
+        @include flex-grid-column(4,100);
+    }
+
+    @include breakpoint(xlarge) {
+        @include flex-grid-column(3,100);
+    }
+}
+
+.am_who-we-are_content {
+    @include flex-grid-column(12,40);
+
+    @include breakpoint(large) {
+        @include flex-grid-column(7,90);
+    }
+}
+/*=====================
+Work with us          |
+=====================*/
+.am_work-with-us {
+    padding: 4em 0;
+    background-color: $brand-color;
+    text-align: center;
+
+    h2 {
+        color: #fff;
+        font-size: 2em
+    }
+    button {
+        background: #fff;
+        box-shadow: 0 20px 40px rgba(0,0,0,.3);
+    }
+}
