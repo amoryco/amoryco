@@ -3934,6 +3934,34 @@ a.thumbnail {
 .clearfix::after {
   clear: both; }
 
+@font-face {
+  font-family: 'Avenir';
+  src: url("/assets/fonts/Avenir/demi/AvenirNextLTPro-Demi.eot");
+  src: url("/assets/fonts/Avenir/demi/AvenirNextLTPro-Demi.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Avenir/demi/AvenirNextLTPro-Demi.woff2") format("woff2"), url("/assets/fonts/Avenir/demi/AvenirNextLTPro-Demi.woff") format("woff"), url("/assets/fonts/Avenir/demi/AvenirNextLTPro-Demi.ttf") format("truetype"), url("/assets/fonts/Avenir/demi/AvenirNextLTPro-Demi.svg#AvenirNextLTPro-Demi") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Avenir';
+  src: url("/assets/fonts/Avenir/medium/AvenirNextLTPro-Medium.eot");
+  src: url("/assets/fonts/Avenir/medium/AvenirNextLTPro-Medium.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Avenir/medium/AvenirNextLTPro-Medium.woff2") format("woff2"), url("/assets/fonts/Avenir/medium/AvenirNextLTPro-Medium.woff") format("woff"), url("/assets/fonts/Avenir/medium/AvenirNextLTPro-Medium.ttf") format("truetype"), url("/assets/fonts/Avenir/medium/AvenirNextLTPro-Medium.svg#AvenirNextLTPro-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Avenir';
+  src: url("/assets/fonts/Avenir/regular/AvenirNextLTPro-Regular.eot");
+  src: url("/assets/fonts/Avenir/regular/AvenirNextLTPro-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Avenir/regular/AvenirNextLTPro-Regular.woff2") format("woff2"), url("/assets/fonts/Avenir/regular/AvenirNextLTPro-Regular.woff") format("woff"), url("/assets/fonts/Avenir/regular/AvenirNextLTPro-Regular.ttf") format("truetype"), url("/assets/fonts/Avenir/regular/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Avenir';
+  src: url("/assets/fonts/Avenir/thin/AvenirNextLTPro-Thin.eot");
+  src: url("/assets/fonts/Avenir/thin/AvenirNextLTPro-Thin.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Avenir/thin/AvenirNextLTPro-Thin.woff2") format("woff2"), url("/assets/fonts/Avenir/thin/AvenirNextLTPro-Thin.woff") format("woff"), url("/assets/fonts/Avenir/thin/AvenirNextLTPro-Thin.ttf") format("truetype"), url("/assets/fonts/Avenir/thin/AvenirNextLTPro-Thin.svg#AvenirNextLTPro-Thin") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
 /*=====================
 Global                |
 =====================*/
@@ -3943,48 +3971,50 @@ body {
   font-size: 1rem; }
   @media print, screen and (min-width: 40em) {
     body {
-      font-size: 1.5rem; } }
+      font-size: 1.32rem; } }
   @media print, screen and (min-width: 64em) {
     body {
-      margin: 1.9rem; } }
+      margin: 1.5rem; } }
+  @media screen and (min-width: 75em) {
+    body {
+      margin: 1.85rem; } }
 
 main {
   background: white;
   margin: 1em; }
-  @media print, screen and (min-width: 40em) {
-    main {
-      margin: 2.5em; } }
   @media print, screen and (min-width: 64em) {
     main {
-      margin: 3em; } }
-
-footer {
-  margin: 1.5em; }
-  @media print, screen and (min-width: 40em) {
-    footer {
       margin: 2.5em; } }
-  @media print, screen and (min-width: 64em) {
-    footer {
-      margin: 3em; } }
 
 /*=====================
 Typography            |
 =====================*/
 .title {
   text-align: center;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 3.5em;
   color: #292929;
   font-family: 'Avenir', 'Roboto Mono', sans-serif;
-  letter-spacing: -0.023em;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0.5em;
   border-bottom: 3px solid #E91E63;
   max-width: 6em; }
 
+.section-title {
+  text-align: left;
+  font-weight: 700;
+  font-size: 3.5em;
+  color: #292929;
+  font-family: 'Avenir', 'Roboto Mono', sans-serif;
+  margin-left: 0;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+  border-bottom: 3px solid #E91E63;
+  max-width: 6em; }
+
 h2 {
-  font-weight: 900;
+  font-weight: 700;
   font-family: 'Avenir', sans-serif;
   font-size: 1.2246em;
   color: #444; }
@@ -3996,12 +4026,12 @@ h3 {
 
 p {
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 400;
   font-family: 'Avenir', sans-serif;
   color: #252525; }
 
 button {
-  font-family: 'Roboto Mono';
+  font-family: 'Roboto Mono', sans-serif;
   border: 2px solid #E91E63;
   padding: 0.5em 1em;
   color: #E91E63;
@@ -4026,12 +4056,13 @@ Intro                 |
   padding-left: 1.40625rem;
   max-width: 100%;
   margin: 0 auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding: 2em 1em;
   text-align: center; }
+  @media print, screen and (min-width: 40em) {
+    .am_intro_text {
+      padding: 2em 1.4em; } }
   @media print, screen and (min-width: 64em) {
     .am_intro_text {
-      padding: 4em 2.5em;
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 83.33333%;
       -ms-flex: 0 0 83.33333%;
@@ -4039,7 +4070,8 @@ Intro                 |
       max-width: 83.33333%;
       padding-right: 0.625rem;
       padding-left: 0.625rem;
-      max-width: 83.33333%; } }
+      max-width: 83.33333%;
+      padding: 4em 2.5em; } }
   @media print, screen and (min-width: 64em) and (min-width: 40em) {
     .am_intro_text {
       padding-right: 0.9375rem;
@@ -4221,10 +4253,22 @@ Work with us          |
 .am_work-with-us {
   padding: 4em 0.5em;
   background-color: #E91E63;
-  text-align: center; }
+  text-align: center;
+  transition: all 0.43s ease; }
   .am_work-with-us h2 {
     color: #fff;
     font-size: 2em; }
   .am_work-with-us button {
     background: #fff;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.43s ease;
+    position: relative; }
+    .am_work-with-us button:hover, .am_work-with-us button:focus {
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.23);
+      text-decoration: none; }
+
+.yellow {
+  background-color: #FFEB3B;
+  padding: 2em; }
+  .yellow p {
+    font-family: 'Roboto Mono'; }

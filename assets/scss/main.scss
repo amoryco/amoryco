@@ -1,6 +1,7 @@
 @import 'settings'; 
 @import 'foundation';
 @include foundation-everything;
+@import 'fontfaces';
 
 $brand-color: #E91E63;
 $brand-secondary-color: #74E2FD;
@@ -11,11 +12,17 @@ body {
     color: #252525;
     background: #f9f9f9;
     font-size: 1rem;
+    
     @include breakpoint(medium) {
-        font-size: 1.5rem;
+        font-size: 1.32rem;
     }
+    
     @include breakpoint(large) {
-        margin: 1.9rem;
+        margin: 1.5rem;
+    }
+    
+    @include breakpoint(xlarge) {
+        margin: 1.85rem;
     }
 }
 
@@ -23,24 +30,8 @@ main {
     background: white;
     margin: 1em;
 
-    @include breakpoint(medium) {
-        margin: 2.5em;
-    }
-
     @include breakpoint(large) {
-        margin: 3em;
-    }
-}
-
-footer {
-    margin: 1.5em;
-
-    @include breakpoint(medium) {
         margin: 2.5em;
-    }
-
-    @include breakpoint(large) {
-        margin: 3em;
     }
 }
 /*=====================
@@ -48,11 +39,10 @@ Typography            |
 =====================*/
 .title {
     text-align: center;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 3.5em;
     color: #292929;
     font-family: 'Avenir', 'Roboto Mono', sans-serif;
-    letter-spacing: -0.023em;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0.5em;
@@ -60,8 +50,21 @@ Typography            |
     max-width: 6em;
 }
 
+.section-title {
+    text-align: left;
+    font-weight: 700;
+    font-size: 3.5em;
+    color: #292929;
+    font-family: 'Avenir', 'Roboto Mono', sans-serif;
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+    border-bottom: 3px solid $brand-color;
+    max-width: 6em;
+}
+
 h2 {
-    font-weight: 900;
+    font-weight: 700;
     font-family: 'Avenir', sans-serif;
     font-size: 1.2246em;
     color:#444;
@@ -75,13 +78,13 @@ h3 {
 
 p {
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 400;
     font-family: 'Avenir', sans-serif;
     color: #252525;
 }
 
 button {
-    font-family: 'Roboto Mono';
+    font-family: 'Roboto Mono', sans-serif;
     border: 2px solid $brand-color;
     padding: 0.5em 1em;
     color: $brand-color;
@@ -103,13 +106,16 @@ Intro                 |
 .am_intro_text {
     @include flex-grid-column(12, 45);
     margin: 0 auto;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding: 2em 1em;
     text-align: center;
 
+    @include breakpoint(medium) {
+        padding: 2em 1.4em;
+    }
+
     @include breakpoint(large) {
-        padding: 4em 2.5em;
         @include flex-grid-column(10);
+        padding: 4em 2.5em;
     }
 
     @include breakpoint(xlarge) {
@@ -265,13 +271,31 @@ Work with us          |
     padding: 4em 0.5em;
     background-color: $brand-color;
     text-align: center;
+    transition: all 0.43s ease;
 
     h2 {
         color: #fff;
         font-size: 2em
     }
+
     button {
         background: #fff;
         box-shadow: 0 20px 40px rgba(0,0,0,.3);
+        transition: all 0.43s ease;
+        position: relative;
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 2px rgba(0,0,0,.23);
+            text-decoration: none;
+        }
+    }
+}
+
+.yellow {
+    background-color: #FFEB3B;
+    padding: 2em;
+    p{
+        font-family: 'Roboto Mono'
     }
 }
