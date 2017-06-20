@@ -4295,25 +4295,19 @@ Selling Tech          |
     -ms-flex-pack: center;
     justify-content: center;
     margin: 0; }
-    @media print, screen and (min-width: 40em) {
-      .selling_tech .technology_list {
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-        justify-content: space-between; } }
     .selling_tech .technology_list .technology_list_item {
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
       display: inline-flex;
-      -webkit-flex-basis: 75%;
-      -ms-flex-preferred-size: 75%;
-      flex-basis: 75%;
-      max-width: 75%;
-      padding: 1em; }
+      -webkit-flex-basis: 65%;
+      -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
+      max-width: 65%;
+      padding: 1.5em; }
       @media print, screen and (min-width: 40em) {
         .selling_tech .technology_list .technology_list_item {
           -webkit-flex-basis: 25%;
           -ms-flex-preferred-size: 25%;
           flex-basis: 25%;
-          max-width: 200px; } }
+          max-width: 240px; } }

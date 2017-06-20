@@ -319,20 +319,20 @@ Selling Tech          |
         justify-content: center;
         margin: 0;
 
-        @include breakpoint(medium) {
-            justify-content: space-between;
-        }
+        // @include breakpoint(medium) {
+        //     justify-content: space-between;
+        // }
 
         .technology_list_item {
             display: inline-flex;
-            flex-basis:75%;
-            max-width: 75%;
+            flex-basis:65%;
+            max-width: 65%;
+            padding: 1.5em;
 
             @include breakpoint(medium) {
                 flex-basis:25%;
-                max-width: 200px;
+                max-width: 240px;
             }
-            padding: 1em;
         }
     }
 
