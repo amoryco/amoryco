@@ -28,7 +28,7 @@ body {
 
 main {
     background: white;
-    margin: 2em 1em;
+    margin: 2em 0.75em;
     max-width: 1200px;
 }
 /*=====================
@@ -50,7 +50,7 @@ Typography            |
 .section-title {
     text-align: left;
     font-weight: 700;
-    font-size: 3.5em;
+    font-size: 3.25em;
     color: #292929;
     font-family: 'Avenir', 'Roboto Mono', sans-serif;
     margin-left: 0;
@@ -314,10 +314,24 @@ Selling Tech          |
 
     .technology_list {
         display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
         margin: 0;
+
+        @include breakpoint(medium) {
+            justify-content: space-between;
+        }
 
         .technology_list_item {
             display: inline-flex;
+            flex-basis:75%;
+            max-width: 75%;
+
+            @include breakpoint(medium) {
+                flex-basis:25%;
+                max-width: 25%;
+            }
             padding: 1em;
         }
     }

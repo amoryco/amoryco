@@ -3981,7 +3981,7 @@ body {
 
 main {
   background: white;
-  margin: 2em 1em;
+  margin: 2em 0.75em;
   max-width: 1200px; }
 
 /*=====================
@@ -4002,7 +4002,7 @@ Typography            |
 .section-title {
   text-align: left;
   font-weight: 700;
-  font-size: 3.5em;
+  font-size: 3.25em;
   color: #292929;
   font-family: 'Avenir', 'Roboto Mono', sans-serif;
   margin-left: 0;
@@ -4295,12 +4295,25 @@ Selling Tech          |
     -ms-flex-pack: center;
     justify-content: center;
     margin: 0; }
+    @media print, screen and (min-width: 40em) {
+      .selling_tech .technology_list {
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between; } }
     .selling_tech .technology_list .technology_list_item {
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
       display: inline-flex;
-      -webkit-flex-basis: 25%;
-      -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
+      -webkit-flex-basis: 75%;
+      -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+      max-width: 75%;
       padding: 1em; }
+      @media print, screen and (min-width: 40em) {
+        .selling_tech .technology_list .technology_list_item {
+          -webkit-flex-basis: 25%;
+          -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
+          max-width: 25%; } }
