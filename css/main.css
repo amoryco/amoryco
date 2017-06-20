@@ -3981,10 +3981,8 @@ body {
 
 main {
   background: white;
-  margin: 1em; }
-  @media print, screen and (min-width: 64em) {
-    main {
-      margin: 2.5em; } }
+  margin: 2em 1em;
+  max-width: 1200px; }
 
 /*=====================
 Typography            |
@@ -4057,7 +4055,7 @@ Intro                 |
   max-width: 100%;
   margin: 0 auto;
   padding: 2em 1em;
-  text-align: center; }
+  text-align: left; }
   @media print, screen and (min-width: 40em) {
     .am_intro_text {
       padding: 2em 1.4em; } }
@@ -4090,6 +4088,9 @@ Intro                 |
     .am_intro_text {
       padding-right: 0.9375rem;
       padding-left: 0.9375rem; } }
+  .am_intro_text .am_intro_text-title .title {
+    margin-left: 0;
+    text-align: left; }
   .am_intro_text h3 {
     font-family: 'Roboto Mono', monospace; }
 
@@ -4267,8 +4268,25 @@ Work with us          |
       box-shadow: 0 0 2px rgba(0, 0, 0, 0.23);
       text-decoration: none; }
 
-.yellow {
+/*=====================
+Selling Tech          |
+=====================*/
+.selling_tech {
   background-color: #FFEB3B;
   padding: 2em; }
-  .yellow p {
+  .selling_tech .selling_tech_intro p {
     font-family: 'Roboto Mono'; }
+  .selling_tech .technology_list_wrapper {
+    padding: 1em 0; }
+  .selling_tech .technology_list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0; }
+    .selling_tech .technology_list .technology_list_item {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      padding: 1em; }
