@@ -314,14 +314,10 @@ Selling Tech          |
 
     .technology_list {
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
         margin: 0;
 
         .technology_list_item {
             display: inline-flex;
-            flex-basis: 25%;
             padding: 1em;
         }
     }
