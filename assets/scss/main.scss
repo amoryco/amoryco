@@ -319,10 +319,6 @@ Selling Tech          |
         justify-content: center;
         margin: 0;
 
-        // @include breakpoint(medium) {
-        //     justify-content: space-between;
-        // }
-
         .technology_list_item {
             display: inline-flex;
             flex-basis:65%;
