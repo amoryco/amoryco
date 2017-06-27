@@ -1,20 +1,38 @@
-<!DOCTYPE html>
+---
+layout: default
+---
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
+
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>
+
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>amory.co</title>
-    <meta name="description" content="amory.co">
+    <meta name="description" content="amory.co"> -->
     <!--TWITTER CARDS-->
-    <meta name="twitter:card" content="summary_large_image">
+   <!--  <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@">
     <meta name="twitter:title" content="">
     <meta name="twitter:creator" content="@amory_co">
     <meta name="twitter:description" content=""> 
-    <meta name="twitter:image:src" content="http://amory.co/image/...">
+    <meta name="twitter:image:src" content="http://amory.co/image/..."> -->
     <!--FACEBOOK-->
-    <meta property="og:type" content="">
+   <!--  <meta property="og:type" content="">
     <meta property="og:url" content="">
     <meta property="og:title" content="">
     <meta property="og:image" content="http://amory.co/">
@@ -32,11 +50,11 @@
                     </div>
                     <div class="am_intro_text-content">
                         <h3>Reputation is everything.</h3>
-                        <!-- <h3>We. Get. Results.</h3> -->
-                        <!-- <p>
+                        <h3>We. Get. Results.</h3>
+                        <p>
                             What you do matters out there - your digital image should reflect that.
                             We help you generate more sales, run successful campaigns, and make a bigger impact in the world.
-                        </p> -->
+                        </p>
                         <p>
                             We don't work with "me too" clients. <br>
                             We don’t buy awards like the agency you used to work with. <br>
@@ -120,4 +138,4 @@
         </section>
     </main> 
 </body>
-</html>
+</html> -->

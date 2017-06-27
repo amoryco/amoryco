@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+  {% include meta.html %}
+  <meta name="description" content="amory.co">
+  <!--TWITTER CARDS-->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:creator" content="@amory_co">
+  <meta name="twitter:description" content=""> 
+  <meta name="twitter:image:src" content="http://amory.co/image/...">
+  <!--FACEBOOK-->
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="">
+  <meta property="og:image" content="http://amory.co/">
+  <meta property="og:description" content="">
+  <link rel="stylesheet" type="text/css" href="css/main.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display|Lato|Roboto+Mono|Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <section class="am_intro">
+      <div class="am_intro_wrapper">
+        <div class="am_intro_text">
+          <div class="am_intro_text-title">
+            <h1 class="title">amory co.</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="main" role="main" class="container">
+      {{ content }}
+    </div>
+    {% include analytics.html %}
+  </body>
+  </html>
