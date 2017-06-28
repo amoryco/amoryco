@@ -4295,6 +4295,11 @@ Selling Tech          |
     -ms-flex-pack: center;
     justify-content: center;
     margin: 0; }
+    @media print, screen and (min-width: 40em) {
+      .selling_tech .technology_list {
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around; } }
     .selling_tech .technology_list .technology_list_item {
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
