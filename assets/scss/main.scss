@@ -281,14 +281,22 @@ Work with us          |
         font-size: 2em
     }
 
-    button {
+    .get-in-touch-wrapper {
+        margin-top: 1.5em;
+    }
+
+    .get-in-touch {
+        font-family: 'Roboto Mono', sans-serif;
+        border: 2px solid $brand-color;
+        padding: 0.5em 1em;
+        color: $brand-color;
+        transition: all 0.4s ease;
         background: #fff;
         box-shadow: 0 20px 40px rgba(0,0,0,.3);
-        transition: all 0.43s ease;
-        position: relative;
 
         &:hover,
         &:focus {
+            cursor: pointer;
             box-shadow: 0 0 2px rgba(0,0,0,.23);
             text-decoration: none;
         }
@@ -303,7 +311,7 @@ Selling Tech          |
     padding: 2em;
 
     .selling_tech_intro {
-        p{
+        p {
             font-family: 'Roboto Mono'
         }
     }
@@ -315,21 +323,33 @@ Selling Tech          |
     .technology_list {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         margin: 0;
 
+        @include breakpoint(medium) {
+            justify-content: space-around;
+        }
+
         .technology_list_item {
-            display: inline-flex;
-            flex-basis:65%;
-            max-width: 65%;
-            padding: 1.5em;
+            display: flex;
+            flex-direction: column;
+            flex-basis: 50%;
+            max-width: 50%;
+            padding: .75em;
 
             @include breakpoint(medium) {
                 flex-basis:25%;
                 max-width: 240px;
+                padding: 1.5em;
             }
         }
     }
 
+    .technology_list_epilogue {
+        p,
+        li {
+            font-family: 'Roboto Mono'
+        }
+    }
 }
