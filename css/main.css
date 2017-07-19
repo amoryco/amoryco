@@ -4109,10 +4109,12 @@ Cases                 |
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  width: 100%; }
+  width: 100%;
+  margin: 10px 0; }
   @media print, screen and (min-width: 40em) {
     .am_case-studies_block {
-      width: 50%; } }
+      width: 50%;
+      margin: 0; } }
 
 .am_case-studies_wco {
   height: 300px;
