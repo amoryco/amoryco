@@ -1,0 +1,52 @@
+@mixin apply-home-styles() {
+  .h_intro {
+    position: relative;
+    height: 100vh;
+    max-height: 800px;
+    background-image: url('/assets/images/sample-bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    .h_intro-container {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 700px;
+      padding: 0 1rem;
+
+      @include breakpoint('medium') {
+        padding: 0 2rem;
+      }
+
+      @include breakpoint('xlarge') {
+        padding: 0 6rem;
+      }
+
+      .h_intro-lead-button {
+        @include primary-button();
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+
+  .h_diff-row {
+    @include grid-row();
+    @include grid-row-alignment($justify-content: center);
+  }
+
+  .h_diff-item {
+    flex: 0 0 100%;
+
+    @include breakpoint('medium') {
+      flex: 0 0 33%;
+    }
+  }
+
+  .h_diff-item-container {
+    padding: 1rem;
+  }
+}

@@ -1,7 +1,4 @@
-@import 'settings'; 
-@import 'foundation';
-@include foundation-everything;
-@import 'fontfaces';
+@import 'base/fonts/fontfaces';
 
 $brand-color: #E91E63;
 $brand-secondary-color: #74E2FD;
@@ -13,17 +10,17 @@ body {
     background: #f9f9f9;
     font-size: 1rem;
     
-    @include breakpoint(medium) {
-        font-size: 1.32rem;
-    }
+    // @include breakpoint(medium) {
+    //     font-size: 1.32rem;
+    // }
     
-    @include breakpoint(large) {
-        margin: 1.5rem;
-    }
+    // @include breakpoint(large) {
+    //     margin: 1.5rem;
+    // }
     
-    @include breakpoint(xlarge) {
-        margin: 1.85rem;
-    }
+    // @include breakpoint(xlarge) {
+    //     margin: 1.85rem;
+    // }
 }
 
 main {
@@ -101,23 +98,23 @@ Intro                 |
 }
 
 .am_intro_text {
-    @include flex-grid-column(12, 45);
+    // @include flex-grid-column(12, 45);
     margin: 0 auto;
     padding: 2em 1em;
     text-align: left;
 
-    @include breakpoint(medium) {
-        padding: 2em 1.4em;
-    }
+    // @include breakpoint(medium) {
+    //     padding: 2em 1.4em;
+    // }
 
-    @include breakpoint(large) {
-        @include flex-grid-column(10);
-        padding: 4em 2.5em;
-    }
+    // @include breakpoint(large) {
+    //     @include flex-grid-column(10);
+    //     padding: 4em 2.5em;
+    // }
 
-    @include breakpoint(xlarge) {
-        @include flex-grid-column(8);
-    }
+    // @include breakpoint(xlarge) {
+    //     @include flex-grid-column(8);
+    // }
 
     .am_intro_text-title {
         .title {
@@ -134,9 +131,9 @@ Intro                 |
 Cases                 |
 =====================*/
 .am_case-studies {
-    @include breakpoint(medium) {
-        display: flex;
-    }
+    // @include breakpoint(medium) {
+    //     display: flex;
+    // }
 }
 
 .am_case-studies_block {
@@ -144,10 +141,10 @@ Cases                 |
     width: 100%;
     margin: 10px 0;
 
-    @include breakpoint(medium) {
-        width: 50%;
-        margin: 0;
-    }
+    // @include breakpoint(medium) {
+    //     width: 50%;
+    //     margin: 0;
+    // }
 }
 
 .am_case-studies_wco{
@@ -158,9 +155,9 @@ Cases                 |
     background-repeat: no-repeat;
     position: relative;
 
-    @include breakpoint(medium) {
-        height: 450px;
-    }
+    // @include breakpoint(medium) {
+    //     height: 450px;
+    // }
 }
 
 .am_case-studies_ta {
@@ -171,9 +168,9 @@ Cases                 |
     background-repeat: no-repeat;
     position: relative;
 
-    @include breakpoint(medium) {
-        height: 450px;
-    }
+    // @include breakpoint(medium) {
+    //     height: 450px;
+    // }
 }
 
 .am_case-studies_link_wrapper {
@@ -213,9 +210,9 @@ Cases                 |
     text-align: left;
     transition: all 0.3s ease;
 
-    @include breakpoint(xlarge) { 
-        font-size: 1.85em;
-    }
+    // @include breakpoint(xlarge) { 
+    //     font-size: 1.85em;
+    // }
 }
 
 .am_case-studies-client {
@@ -225,9 +222,9 @@ Cases                 |
     padding: 0;
     transition: all 0.3s ease;
 
-    @include breakpoint(large) { 
-        font-size: 1.05em;
-    }
+    // @include breakpoint(large) { 
+    //     font-size: 1.05em;
+    // }
 }
 
 .am_case-studies-button {
@@ -245,29 +242,29 @@ Who we is             |
 }
 
 .am_who-we-are_wrapper {
-    @include breakpoint(large) {
-        display: flex;
-    }
+    // @include breakpoint(large) {
+    //     display: flex;
+    // }
 }
 
 .am_who-we-are_title {
-    @include flex-grid-column(12,40);
+    // @include flex-grid-column(12,40);
 
-    @include breakpoint(large) {
-        @include flex-grid-column(4,100);
-    }
+    // @include breakpoint(large) {
+    //     @include flex-grid-column(4,100);
+    // }
 
-    @include breakpoint(xlarge) {
-        @include flex-grid-column(3,100);
-    }
+    // @include breakpoint(xlarge) {
+    //     @include flex-grid-column(3,100);
+    // }
 }
 
 .am_who-we-are_content {
-    @include flex-grid-column(12,40);
+    // @include flex-grid-column(12,40);
 
-    @include breakpoint(large) {
-        @include flex-grid-column(8,90);
-    }
+    // @include breakpoint(large) {
+    //     @include flex-grid-column(8,90);
+    // }
 }
 /*=====================
 Work with us          |
@@ -329,9 +326,9 @@ Selling Tech          |
         justify-content: center;
         margin: 0;
 
-        @include breakpoint(medium) {
-            justify-content: space-around;
-        }
+        // @include breakpoint(medium) {
+        //     justify-content: space-around;
+        // }
 
         .technology_list_item {
             display: flex;
@@ -339,12 +336,11 @@ Selling Tech          |
             flex-basis: 50%;
             max-width: 50%;
             padding: .75em;
-
-            @include breakpoint(medium) {
-                flex-basis:25%;
-                max-width: 240px;
-                padding: 1.5em;
-            }
+            // @include breakpoint(medium) {
+            //     flex-basis:25%;
+            //     max-width: 240px;
+            //     padding: 1.5em;
+            // }
         }
     }
 

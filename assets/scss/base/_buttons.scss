@@ -1,0 +1,7 @@
+@mixin primary-button() {
+  border: rem-calc(3) solid $brand-color;
+  outline: none;
+  padding: rem-calc(12) rem-calc(16);
+  text-decoration: none;
+  color: inherit;
+}

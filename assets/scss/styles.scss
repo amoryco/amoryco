@@ -1,0 +1,10 @@
+@import 'cork.scss';
+@import 'abstracts/variables.scss';
+@import 'abstracts/functions.scss';
+@import 'base/typography.scss';
+@import 'base/buttons.scss';
+@import 'base/grid.scss';
+@import 'components/home.scss';
+
+@include decanter-reset-styles();
+@include apply-home-styles();
