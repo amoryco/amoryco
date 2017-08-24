@@ -2,7 +2,7 @@
   .h_intro {
     position: relative;
     height: 100vh;
-    max-height: 800px;
+    max-height: rem-calc(800);
     background-image: url('/assets/images/sample-bg.jpg');
     background-position: center center;
     background-repeat: no-repeat;
@@ -13,7 +13,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      max-width: 700px;
+      max-width: rem-calc(700);
       padding: 0 1rem;
 
       @include breakpoint('medium') {
@@ -32,21 +32,34 @@
     }
   }
 
-
-  .h_diff-row {
-    @include grid-row();
-    @include grid-row-alignment($justify-content: center);
+  .h_cta {
+    padding: rem-calc(64) 0;
+    text-align: center;
   }
 
-  .h_diff-item {
-    flex: 0 0 100%;
+  .h_cta-container {
+    max-width: rem-calc(800);
+    margin: 0 auto;
+  }
 
-    @include breakpoint('medium') {
-      flex: 0 0 33%;
+  .h_diff {
+    .h_diff-row {
+      @include grid-row();
+      @include grid-row-alignment($justify-content: center);
+      max-width: 1200px;
+      margin: 0 auto;
     }
-  }
 
-  .h_diff-item-container {
-    padding: 1rem;
+    .h_diff-item {
+      flex: 0 0 100%;
+
+      @include breakpoint('medium') {
+        flex: 0 0 33%;
+      }
+    }
+
+    .h_diff-item-container {
+      padding: 1rem;
+    }
   }
 }

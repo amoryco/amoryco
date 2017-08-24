@@ -45,7 +45,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0; }
+  margin-top: 0;
+  margin-bottom: 1.125rem; }
 
 h1 {
   font-family: "Avenir";
@@ -266,7 +267,7 @@ th {
 .h_intro {
   position: relative;
   height: 100vh;
-  max-height: 800px;
+  max-height: 50rem;
   background-image: url("/assets/images/sample-bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -276,7 +277,7 @@ th {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 700px;
+    max-width: 43.75rem;
     padding: 0 1rem; }
     @media screen and (min-width: 37.5rem) {
       .h_intro .h_intro-container {
@@ -293,18 +294,28 @@ th {
       font-weight: 700;
       text-transform: uppercase; }
 
-.h_diff-row {
+.h_cta {
+  padding: 4rem 0;
+  text-align: center; }
+
+.h_cta-container {
+  max-width: 50rem;
+  margin: 0 auto; }
+
+.h_diff .h_diff-row {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  align-items: stretch; }
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto; }
 
-.h_diff-item {
+.h_diff .h_diff-item {
   flex: 0 0 100%; }
   @media screen and (min-width: 37.5rem) {
-    .h_diff-item {
+    .h_diff .h_diff-item {
       flex: 0 0 33%; } }
 
-.h_diff-item-container {
+.h_diff .h_diff-item-container {
   padding: 1rem; }
