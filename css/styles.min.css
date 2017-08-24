@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Avenir';
   src: url("/assets/fonts/Avenir/demi/AvenirNextLTPro-Demi.eot");
@@ -55,7 +56,7 @@ h1 {
   border-bottom: 0.1875rem solid #E91E63; }
 
 h2 {
-  font-family: "Abril Fatface";
+  font-family: "Avenir";
   font-size: 3rem;
   font-weight: 700; }
 
@@ -113,6 +114,9 @@ th,
 td {
   margin: 0;
   padding: 0; }
+
+ul {
+  padding-left: 2rem; }
 
 audio,
 canvas,
@@ -267,6 +271,7 @@ th {
 .h_intro {
   position: relative;
   height: 100vh;
+  min-height: 37.5rem;
   max-height: 50rem;
   background-image: url("/assets/images/sample-bg.jpg");
   background-position: center center;
@@ -285,6 +290,8 @@ th {
     @media screen and (min-width: 75rem) {
       .h_intro .h_intro-container {
         padding: 0 6rem; } }
+    .h_intro .h_intro-container .h_intro-lead-text {
+      margin-bottom: 2rem; }
     .h_intro .h_intro-container .h_intro-lead-button {
       border: 0.1875rem solid #E91E63;
       outline: none;
@@ -292,30 +299,125 @@ th {
       text-decoration: none;
       color: inherit;
       font-weight: 700;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      margin-top: 1rem; }
 
 .h_cta {
   padding: 4rem 0;
   text-align: center; }
 
 .h_cta-container {
-  max-width: 50rem;
+  max-width: 56.25rem;
   margin: 0 auto; }
 
-.h_diff .h_diff-row {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  max-width: 1200px;
-  margin: 0 auto; }
-
-.h_diff .h_diff-item {
-  flex: 0 0 100%; }
-  @media screen and (min-width: 37.5rem) {
-    .h_diff .h_diff-item {
-      flex: 0 0 33%; } }
-
-.h_diff .h_diff-item-container {
-  padding: 1rem; }
+.h_diff {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 2.625rem 0; }
+  .h_diff .h_diff-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    margin: 0 auto; }
+  .h_diff .h_diff-item {
+    flex: 0 0 100%; }
+    @media screen and (min-width: 37.5rem) {
+      .h_diff .h_diff-item {
+        flex: 0 0 45%; } }
+    @media screen and (min-width: 56.25rem) {
+      .h_diff .h_diff-item {
+        flex: 0 0 32%; } }
+    .h_diff .h_diff-item .h_diff-item-icon {
+      text-align: center;
+      font-size: 6rem;
+      color: #E91E63; }
+    .h_diff .h_diff-item.h_diff-item-platforms .h_diff-item-icon:before {
+      display: inline-block;
+      font-family: "Ionicons";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      text-rendering: auto;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: ""; }
+    .h_diff .h_diff-item.h_diff-item-customer .h_diff-item-icon:before {
+      display: inline-block;
+      font-family: "Ionicons";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      text-rendering: auto;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: ""; }
+    .h_diff .h_diff-item.h_diff-item-integrations .h_diff-item-icon:before {
+      display: inline-block;
+      font-family: "Ionicons";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      text-rendering: auto;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: ""; }
+    .h_diff .h_diff-item.h_diff-item-design .h_diff-item-icon:before {
+      display: inline-block;
+      font-family: "Ionicons";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      text-rendering: auto;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: ""; }
+    .h_diff .h_diff-item.h_diff-item-strategy .h_diff-item-icon:before {
+      display: inline-block;
+      font-family: "Ionicons";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      text-rendering: auto;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: ""; }
+    .h_diff .h_diff-item.h_diff-item-software .h_diff-item-icon:before {
+      display: inline-block;
+      font-family: "Ionicons";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      text-rendering: auto;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: ""; }
+  .h_diff .h_diff-item-container {
+    padding: 1rem;
+    height: 100%; }
+    .h_diff .h_diff-item-container .h_diff-item-title {
+      text-align: center; }
+    @media screen and (min-width: 37.5rem) {
+      .h_diff .h_diff-item-container {
+        padding: 2rem; } }

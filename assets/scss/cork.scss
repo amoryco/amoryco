@@ -45,6 +45,10 @@ $decanter-base-background-color: #ffffff !default;
     padding: 0;
   }
 
+  ul {
+    padding-left: rem-calc(32);
+  }
+
   audio,
   canvas,
   progress,

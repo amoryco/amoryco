@@ -2,6 +2,7 @@
   .h_intro {
     position: relative;
     height: 100vh;
+    min-height: rem-calc(600);
     max-height: rem-calc(800);
     background-image: url('/assets/images/sample-bg.jpg');
     background-position: center center;
@@ -24,10 +25,13 @@
         padding: 0 6rem;
       }
 
+      .h_intro-lead-text {
+        margin-bottom: rem-calc(32);
+      }
+
       .h_intro-lead-button {
         @include primary-button();
-        font-weight: 700;
-        text-transform: uppercase;
+        margin-top: rem-calc(16);
       }
     }
   }
@@ -38,15 +42,20 @@
   }
 
   .h_cta-container {
-    max-width: rem-calc(800);
+    max-width: rem-calc(900);
     margin: 0 auto;
   }
 
   .h_diff {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: rem-calc(42) 0;
+
     .h_diff-row {
       @include grid-row();
-      @include grid-row-alignment($justify-content: center);
-      max-width: 1200px;
+      @include grid-row-alignment($justify-content: space-around);
       margin: 0 auto;
     }
 
@@ -54,12 +63,67 @@
       flex: 0 0 100%;
 
       @include breakpoint('medium') {
-        flex: 0 0 33%;
+        flex: 0 0 45%;
+      }
+
+      @include breakpoint('large') {
+        flex: 0 0 32%;
+      }
+
+      .h_diff-item-icon {
+        text-align: center;
+        font-size: 6rem;
+        color: $brand-color;
+      }
+
+      &.h_diff-item-platforms {
+        .h_diff-item-icon {
+          @include apply-icons($ion-ios-cart);
+        }
+      }
+
+      &.h_diff-item-customer {
+        .h_diff-item-icon {
+          @include apply-icons($ion-ios-people);
+        }
+      }
+
+      &.h_diff-item-integrations {
+        .h_diff-item-icon {
+          @include apply-icons($ion-document-text);
+        }
+      }
+
+      &.h_diff-item-design {
+        .h_diff-item-icon {
+          @include apply-icons($ion-paintbrush);
+        }
+      }
+
+      &.h_diff-item-strategy {
+        .h_diff-item-icon {
+          @include apply-icons($ion-ios-navigate);
+        }
+      }
+
+      &.h_diff-item-software {
+        .h_diff-item-icon {
+          @include apply-icons($ion-ios-monitor);
+        }
       }
     }
 
     .h_diff-item-container {
-      padding: 1rem;
+      padding: rem-calc(16);
+      height: 100%;
+
+      .h_diff-item-title {
+        text-align: center;
+      }
+
+      @include breakpoint('medium') {
+        padding: rem-calc(32);
+      }
     }
   }
 }
