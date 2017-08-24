@@ -1,0 +1,23 @@
+@mixin primary-button() {
+  border: rem-calc(3) solid $brand-color;
+  outline: none;
+  padding: rem-calc(12) rem-calc(16);
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+button {
+  font-family: 'Roboto Mono', sans-serif;
+  border: 2px solid $brand-color;
+  padding: 0.5em 1em;
+  color: $brand-color;
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

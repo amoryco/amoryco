@@ -1,18 +1,18 @@
 'use strict';
 
-var gulp         = require('gulp'),
-    gutil        = require('gulp-util'),
-    plumber      = require('gulp-plumber'),
-    sass         = require('gulp-sass'),
-    sourcemaps   = require('gulp-sourcemaps'),
-    autoprefixer = require('gulp-autoprefixer'),
-    cleancss     = require('gulp-clean-css'),
-    jshint       = require('gulp-jshint'),
-    stylish      = require('jshint-stylish'),
-    uglify       = require('gulp-uglify'),
-    concat       = require('gulp-concat'),
-    rename       = require('gulp-rename'),
-    browser      = require('browser-sync').create();
+const gulp         = require('gulp'),
+      gutil        = require('gulp-util'),
+      plumber      = require('gulp-plumber'),
+      sass         = require('gulp-sass'),
+      sourcemaps   = require('gulp-sourcemaps'),
+      autoprefixer = require('gulp-autoprefixer'),
+      cleancss     = require('gulp-clean-css'),
+      jshint       = require('gulp-jshint'),
+      stylish      = require('jshint-stylish'),
+      uglify       = require('gulp-uglify'),
+      concat       = require('gulp-concat'),
+      rename       = require('gulp-rename'),
+      browser      = require('browser-sync').create();
 
 gulp.task('browser-sync', ['styles', 'scripts'], function () {
     browser.init({
@@ -23,19 +23,13 @@ gulp.task('browser-sync', ['styles', 'scripts'], function () {
 });
 
 gulp.task('styles', function () {
-    return gulp.src('./assets/scss/main.scss')
+    return gulp.src('./assets/scss/styles.scss')
         .pipe(plumber(function (error) {
             gutil.log(gutil.colors.red(error.message));
             this.emit('end');
         }))
-        .pipe(sass({ includePaths : ['node_modules/foundation-sites/scss']}))
-        .pipe(autoprefixer({
-            browsers: ['> 1%', 'last 5 versions', 'ie >= 9', 'Firefox ESR'],
-            cascade : false
-        }))
-        .pipe(gulp.dest('./css/'))
+        .pipe(sass())
         .pipe(rename({suffix: '.min'}))
-        .pipe(cleancss({compatibility: 'ie9'}))
         .pipe(gulp.dest('./css/'))
         .pipe(browser.reload({stream:true}));
 });
@@ -70,7 +64,7 @@ gulp.task('default', function () {
 });
 
 gulp.task('watch', ['browser-sync'], function () {
-    gulp.watch('./assets/scss/*.scss', ['styles']);
+    gulp.watch('./assets/scss/*/*.scss', ['styles']);
     gulp.watch('./assets/js/*.js', ['scripts']);
     gulp.watch("*.html").on('change', browser.reload);
 });
