@@ -37,6 +37,9 @@ td {
 ul {
   padding-left: rem-calc(32); }
 
+p {
+  margin-top: 0; }
+
 audio,
 canvas,
 progress,
@@ -223,11 +226,11 @@ th {
   font-style: normal; }
 
 body {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 400;
   font-family: "Avenir", "Helvetica", "sans-serif";
   color: #252625;
-  background: #f9f9f9; }
+  background: #f7f7f7; }
 
 h1,
 h2,
@@ -238,22 +241,28 @@ h6 {
   margin-top: 0;
   margin-bottom: 1.125rem; }
 
+p {
+  font-size: 1.125rem; }
+
 h1 {
   font-family: "Avenir";
-  font-size: 3.625rem;
+  margin-bottom: 2.375rem;
+  border-bottom: 0.1875rem solid #E91E63;
+  max-width: 24.0625rem;
+  font-size: 4.5rem;
   font-weight: 700;
-  border-bottom: 0.1875rem solid #E91E63; }
+  color: #292929; }
 
 h2 {
   font-family: "Avenir";
+  font-size: 1.5rem;
   font-weight: 700;
-  font-size: 1.2246em;
   color: #444; }
 
 h3 {
-  font-family: "Avenir";
-  font-weight: 600;
-  font-size: 1.05em; }
+  font-family: "Roboto Mono";
+  font-size: 1.5rem;
+  font-weight: 600; }
 
 h4 {
   font-family: "Avenir";
@@ -269,35 +278,12 @@ h6 {
   font-weight: 700;
   text-transform: uppercase; }
 
-.title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 3.5em;
-  color: #292929;
-  font-family: "Avenir", sans-serif;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0.5em;
-  border-bottom: 3px solid #E91E63;
-  max-width: 6em; }
-
 .section-title {
-  text-align: left;
   font-weight: 700;
   font-size: 3em;
-  color: #292929;
-  font-family: "Avenir", sans-serif;
-  margin-left: 0;
-  margin-right: auto;
   margin-bottom: 0.5em;
-  border-bottom: 3px solid #E91E63;
+  border-bottom: 0.1875rem solid #E91E63;
   max-width: 6em; }
-
-p {
-  font-size: 1.125rem;
-  font-weight: 400;
-  font-family: "Avenir", sans-serif;
-  color: #252525; }
 
 button {
   font-family: 'Roboto Mono', sans-serif;
@@ -310,11 +296,14 @@ button {
     cursor: pointer; }
 
 main {
-  background: white;
-  margin: 2rem auto;
-  max-width: 1200px; }
+  margin: 0rem; }
+  @media screen and (min-width: 37.5rem) {
+    main {
+      margin: 2rem; } }
 
-.am_intro_wrapper {
+.am_inner-container {
+  margin: 0 auto;
+  max-width: 75rem;
   background: white; }
 
 .am_intro_text {
@@ -326,12 +315,10 @@ main {
       padding: 2em 1.4em; } }
   @media screen and (min-width: 56.25rem) {
     .am_intro_text {
-      padding: 4em 2.5em; } }
-  .am_intro_text .am_intro_text-title .title {
-    margin-left: 0;
-    text-align: left; }
-  .am_intro_text h3 {
-    font-family: "Roboto Mono"; }
+      padding: 4rem 5.5rem; } }
+
+.am_intro_text-content {
+  max-width: 56.25rem; }
 
 @media screen and (min-width: 37.5rem) {
   .am_case-studies {
@@ -426,11 +413,17 @@ main {
   @media screen and (min-width: 56.25rem) {
     .am_who-we-are_wrapper {
       display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: stretch;
       padding: 0 2.625rem; } }
 
 .am_who-we-are_title {
-  padding-top: 2rem;
-  padding-right: 2rem; }
+  flex: 1 1 15%; }
+
+.am_who-we-are_content {
+  flex: 1 1 80%; }
 
 .am_work-with-us {
   padding: 4rem 0.5rem;

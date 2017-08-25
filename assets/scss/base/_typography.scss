@@ -1,11 +1,11 @@
 @import 'base/fonts/fontfaces.scss';
 
 body {
-  font-size: rem-calc($base-font-size);
+  font-size: $base-font-size;
   font-weight: $base-font-weight-normal;
   font-family: $base-font-family-sans, 'Helvetica', 'sans-serif';
   color: $body-color;
-  background: #f9f9f9;
+  background: #f7f7f7;
 }
 
 h1,
@@ -16,6 +16,10 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: rem-calc(18);
+}
+
+p {
+  font-size: rem-calc(18);
 }
 
 @mixin clear-list-styles(){
@@ -29,22 +33,25 @@ h6 {
 
 @mixin heading-style-h1() {
   @include apply-font-stack($base-font-family-sans);
-  font-size: rem-calc(58);
-  font-weight: 700;
+  margin-bottom: rem-calc(38);
   border-bottom: rem-calc(3) solid $brand-color; 
+  max-width: rem-calc(385);
+  font-size: rem-calc(72);
+  font-weight: 700;
+  color: #292929;
 }
 
 @mixin heading-style-h2() {
   @include apply-font-stack($base-font-family-sans);
+  font-size: rem-calc(24);
   font-weight: 700;
-  font-size: 1.2246em;
   color:#444;
 }
 
 @mixin heading-style-h3() {
-  @include apply-font-stack($base-font-family-sans);
+  @include apply-font-stack($base-font-family-mono);
+  font-size: rem-calc(24);
   font-weight: 600;
-  font-size: 1.05em;
 }
 
 @mixin heading-style-h4() {
@@ -88,35 +95,10 @@ h6 {
   @include heading-style-h6();
 }
 
-.title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 3.5em;
-  color: #292929;
-  font-family: $base-font-family-sans, sans-serif;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0.5em;
-  border-bottom: 3px solid $brand-color;
-  max-width: 6em;
-}
-
 .section-title {
-  text-align: left;
   font-weight: 700;
   font-size: 3em;
-  color: #292929;
-  font-family: $base-font-family-sans, sans-serif;
-  margin-left: 0;
-  margin-right: auto;
   margin-bottom: 0.5em;
-  border-bottom: 3px solid $brand-color;
+  border-bottom: rem-calc(3) solid $brand-color;
   max-width: 6em;
-}
-
-p {
-  font-size: rem-calc(18);
-  font-weight: 400;
-  font-family: $base-font-family-sans, sans-serif;
-  color: #252525;
 }

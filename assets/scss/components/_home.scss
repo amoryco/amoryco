@@ -1,11 +1,15 @@
 @mixin apply-home-styles() {
   main {
-    background: white;
-    margin: rem-calc(32) auto;
-    max-width: 1200px;
+    margin: rem-calc(0);
+
+    @include breakpoint('medium') {
+      margin: rem-calc(32);
+    }
   }
 
-  .am_intro_wrapper {
+  .am_inner-container {
+    margin: 0 auto;
+    max-width: rem-calc(1200);
     background: white;
   }
 
@@ -19,19 +23,12 @@
     }
 
     @include breakpoint('large') {
-      padding: 4em 2.5em;
+      padding: 4rem rem-calc(88);
     }
+  }
 
-    .am_intro_text-title {
-      .title {
-        margin-left: 0;
-        text-align: left;
-      }
-    }
-
-    h3 {
-      font-family: $base-font-family-mono;
-    }
+  .am_intro_text-content {
+    max-width: rem-calc(900);
   }
 
   .am_case-studies {
@@ -147,19 +144,20 @@
 
   .am_who-we-are_wrapper {
     padding: 0 rem-calc(16);
+    
     @include breakpoint('large') {
-      display: flex;
+      @include grid-row();
+      @include grid-row-alignment();
       padding: 0 rem-calc(42);
     }
   }
 
   .am_who-we-are_title {
-    padding-top: rem-calc(32);
-    padding-right: rem-calc(32);
+    flex: 1 1 15%;
   }
 
   .am_who-we-are_content {
-
+    flex: 1 1 80%;
   }
 
   .am_work-with-us {
