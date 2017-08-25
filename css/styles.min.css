@@ -420,10 +420,10 @@ main {
       padding: 0 2.625rem; } }
 
 .am_who-we-are_title {
-  flex: 1 1 15%; }
+  flex: 1 1 25%; }
 
 .am_who-we-are_content {
-  flex: 1 1 80%; }
+  flex: 1 1 70%; }
 
 .am_work-with-us {
   padding: 4rem 0.5rem;
