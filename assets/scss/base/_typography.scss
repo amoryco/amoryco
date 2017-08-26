@@ -50,7 +50,7 @@ p {
 
 @mixin heading-style-h3() {
   @include apply-font-stack($base-font-family-mono);
-  font-size: rem-calc(24);
+  font-size: rem-calc(20);
   font-weight: 600;
 }
 

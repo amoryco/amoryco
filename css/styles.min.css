@@ -190,6 +190,10 @@ td,
 th {
   padding: 0; }
 
+.emoji {
+  font-weight: 400;
+  font-family: "Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Segoe UI Symbol","Android Emoji",EmojiSymbols; }
+
 @font-face {
   font-family: 'Avenir';
   src: url("/assets/fonts/Avenir/demi/AvenirNextLTPro-Demi.eot");
@@ -261,7 +265,7 @@ h2 {
 
 h3 {
   font-family: "Roboto Mono";
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600; }
 
 h4 {
