@@ -1,0 +1,46 @@
+@mixin apply-blog-styles() {
+  .blog_content {
+    @each $breakpoint, $size in $defaultPadding {
+      @include breakpoint($breakpoint) {
+        padding: $size;
+      }
+    }
+
+    .blog_title {
+      font-size: rem-calc(50);
+      border: 0;
+    }
+
+    .blog_cta-button {
+      box-shadow: 0 rem-calc(20) rem-calc(40) rgba(0,0,0,.3);
+      padding: 0.5rem 1rem;
+      font-weight: 700;
+      font-size: rem-calc(20);
+      color: #fff;
+      background: $brand-color;
+      text-decoration: none;
+      transition: all 0.4s ease;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        box-shadow: 0 0 rem-calc(2) rgba(0,0,0,.23);
+      }
+    }
+
+    .image-wrapper {
+      margin: rem-calc(32) 0;
+    }
+
+    .giphy-embed {
+      width: 100%;
+      height: auto;
+      min-height: 225px;
+    }
+
+    .image-subtitle {
+      text-align: center;
+      margin-top: -4px;
+    }
+  }
+}

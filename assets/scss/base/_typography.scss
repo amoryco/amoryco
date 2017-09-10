@@ -35,7 +35,6 @@ p {
   @include apply-font-stack($base-font-family-sans);
   margin-bottom: rem-calc(38);
   border-bottom: rem-calc(3) solid $brand-color; 
-  max-width: rem-calc(385);
   font-size: rem-calc(72);
   font-weight: 700;
   color: #292929;

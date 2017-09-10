@@ -1,0 +1,33 @@
+@mixin apply-layout-styles() {
+  main {
+    margin: rem-calc(0);
+
+    @include breakpoint('medium') {
+      margin: rem-calc(32);
+    }
+  }
+
+  .am_inner-container {
+    margin: 0 auto;
+    max-width: rem-calc(1200);
+    background: white;
+    box-shadow:  0 1px 1px #999;
+  }
+
+  .am_bubble {
+    position: fixed;
+    z-index: 999;
+    bottom:  1rem;
+    right:  2rem;
+    width:  4em;
+ 
+    .am_bubble-wrap { 
+      cursor: pointer;
+    }
+
+    .am_bubble-wrap-image  { 
+      box-shadow: 0 1px 1px #353535;
+      border-radius: 50%;  
+    }
+  }
+}

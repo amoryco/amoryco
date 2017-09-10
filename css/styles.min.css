@@ -252,7 +252,6 @@ h1 {
   font-family: "Avenir";
   margin-bottom: 2.375rem;
   border-bottom: 0.1875rem solid #E91E63;
-  max-width: 24.0625rem;
   font-size: 4.5rem;
   font-weight: 700;
   color: #292929; }
@@ -308,18 +307,34 @@ main {
 .am_inner-container {
   margin: 0 auto;
   max-width: 75rem;
-  background: white; }
+  background: white;
+  box-shadow: 0 1px 1px #999; }
+
+.am_bubble {
+  position: fixed;
+  z-index: 999;
+  bottom: 1rem;
+  right: 2rem;
+  width: 4em; }
+  .am_bubble .am_bubble-wrap {
+    cursor: pointer; }
+  .am_bubble .am_bubble-wrap-image {
+    box-shadow: 0 1px 1px #353535;
+    border-radius: 50%; }
 
 .am_intro_text {
   margin: 0 auto;
-  padding: 2em 1em;
-  text-align: left; }
+  text-align: left;
+  padding: 36px 16px; }
   @media screen and (min-width: 37.5rem) {
     .am_intro_text {
-      padding: 2em 1.4em; } }
+      padding: 36px 24px; } }
   @media screen and (min-width: 56.25rem) {
     .am_intro_text {
-      padding: 4rem 5.5rem; } }
+      padding: 64px 88px; } }
+
+.am_intro_text-title h1 {
+  max-width: 24.0625rem; }
 
 .am_intro_text-content {
   max-width: 56.25rem; }
@@ -359,7 +374,7 @@ main {
 
 .am_case-studies_link_wrapper:hover .am_case-studies-button, .am_case-studies_link_wrapper:focus .am_case-studies-button {
   border-bottom: 0.125rem solid #E91E63;
-  padding-bottom: 0.4em; }
+  padding-bottom: 0.5rem; }
 
 .am_case-studies_filter {
   position: absolute;
@@ -479,3 +494,36 @@ main {
   .selling_tech .technology_list_epilogue p,
   .selling_tech .technology_list_epilogue li {
     font-family: 'Roboto Mono'; }
+
+.blog_content {
+  padding: 36px 16px; }
+  @media screen and (min-width: 37.5rem) {
+    .blog_content {
+      padding: 36px 24px; } }
+  @media screen and (min-width: 56.25rem) {
+    .blog_content {
+      padding: 64px 88px; } }
+  .blog_content .blog_title {
+    font-size: 3.125rem;
+    border: 0; }
+  .blog_content .blog_cta-button {
+    box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #fff;
+    background: #E91E63;
+    text-decoration: none;
+    transition: all 0.4s ease; }
+    .blog_content .blog_cta-button:hover, .blog_content .blog_cta-button:focus {
+      cursor: pointer;
+      box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.23); }
+  .blog_content .image-wrapper {
+    margin: 2rem 0; }
+  .blog_content .giphy-embed {
+    width: 100%;
+    height: auto;
+    min-height: 225px; }
+  .blog_content .image-subtitle {
+    text-align: center;
+    margin-top: -4px; }
